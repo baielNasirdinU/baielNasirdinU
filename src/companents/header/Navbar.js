@@ -54,7 +54,7 @@ const Navbar = ({ theme, setTheme }) => {
 
     setToggle((prevState) => !prevState);
   };
-  console.log(toggleNav);
+
   return (
     <div className={"sticky top-0 z-20"}>
       <header
@@ -80,11 +80,10 @@ const Navbar = ({ theme, setTheme }) => {
                   <Link
                     to={value.href}
                     onClick={() => activeHandler(value.id)}
-                    className={`hover:text-green-500 transition-all duration-500     ${
-                      active === value.id
-                        ? "text-blue-900 "
-                        : ""
-                    }`}
+                    className={`hover:text-green-500 transition-all duration-500     ${active === value.id
+                      ? "text-blue-900 "
+                      : ""
+                      }`}
                   >
                     {value.name}
                   </Link>
@@ -119,9 +118,8 @@ const Navbar = ({ theme, setTheme }) => {
                 )}
               </div>
               <div
-                className={`bg-slate-30  absolute top-20  ${
-                  toggleNav ? "hidden" : "flex"
-                } p-6 left-0 right-0 sm:hidden  bg-slate-500 sidebar `}
+                className={`bg-slate-30  absolute top-20  ${toggleNav ? "hidden" : "flex"
+                  } p-6 left-0 right-0 sm:hidden  bg-slate-500 sidebar `}
               >
                 <ul
                   className={`sm:${styles.flexBetween}  ${styles.textC}   text-lg  list-none flex-col text-center  m-auto  `}
@@ -135,11 +133,10 @@ const Navbar = ({ theme, setTheme }) => {
                         }
                         className={`hover:text-green-500 transition-all duration-500 z-30 
                         
-                        ${
-                          active === value.id
+                        ${active === value.id
                             ? "text-green-900"
                             : ""
-                        }`}
+                          }`}
                       >
                         {value.name}
                       </Link>

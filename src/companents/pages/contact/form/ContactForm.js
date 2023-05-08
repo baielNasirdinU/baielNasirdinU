@@ -20,13 +20,12 @@ export class ContactForm extends Component {
     // e.preventDefault();
   };
   render() {
-    console.log(this.state);
+    // console.log(this.state);
     return (
       <div className=" text-[22px] capitalize">
         <div
-          className={`  rounded-lg ${
-            this.props.theme ? "border" : "bg-gray-300"
-          } p-3 w-[350px]  `}
+          className={`  rounded-lg ${this.props.theme ? "border" : "bg-gray-300"
+            } p-3 w-[350px]  `}
         >
           <form action="" className={`flex-col flex    `}>
             <label htmlFor="name">firstName</label>

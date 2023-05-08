@@ -18,7 +18,7 @@ const App = () => {
       prevState = !theme;
     });
   };
-  console.log(theme);
+  // console.log(theme);
   return (
     <>
       <ThemContextProvider>
