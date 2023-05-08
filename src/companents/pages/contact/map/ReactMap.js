@@ -15,7 +15,7 @@ const ReactMap = () => {
     <YMaps>
       <div className="p-2 bg-gray-400 rounded shadow">
         <Map
-          className="h-[400px] w-[600px] border  "
+          className="h-[400px] sm:w-[600px] w-[400px] border  "
           defaultState={{
             center: [42.857732, 74.682501],
             zoom: 10,

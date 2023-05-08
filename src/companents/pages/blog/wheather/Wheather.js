@@ -27,20 +27,11 @@ const Wheather = ({ theme }) => {
 
 
 
-  const changeInput = (e) => {
-    if (e.target.value.trim()) {
-      setCityName(
-        e.target.value,
-      );
-    }
-  }
 
 
 
   const handleWheather = () => {
     if (cityName) {
-
-
 
       const aipUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=597872fc47bb1c6261351b6332e5e857`
       axios.get(aipUrl)
@@ -52,28 +43,25 @@ const Wheather = ({ theme }) => {
           })
           setCityName('')
 
-
-
-
-        })
+        }
+        )
         .catch(e => {
           if (e.response.status == 404) {
             setError("i dont know so name pf city")
+            setCityName('')
 
           } else {
             setError('')
+            setCityName('')
           }
         })
-      const changeInput = (e) => {
-        setCityName(e.target.value)
 
-
-      }
 
 
 
 
     } else {
+
       alert('write name of city')
     }
 
@@ -82,13 +70,21 @@ const Wheather = ({ theme }) => {
 
   }
 
+  const changeInput = (e) => {
+    setCityName(e.target.value)
+    // if (!cityName) {
+    //   setCityName(e.target.value = '')
+
+    // }
+
+  }
 
   return (
-    <div className={` h-[430px]  `}>
-      < div className={`m-auto w-[30%] ${theme ? 'light' : 'dark'} p-8 rounded-lg`}>
-        <div className={` ${styles.flexBetween} mb-2`}>
-          <input type="text" className={`pl-[10px] rounded-[15px]  mr-3 ${theme ? ' dark' : 'light'}`} placeholder='write name of city' onChange={changeInput} />
-          <button className={`text-[22px] p-2  border rounded-[50%]  ${theme ? ' dark' : 'light'}`} onClick={handleWheather}><FaSearch /></button>
+    <div className={` h-[100%]  `}>
+      < div className={`m-auto lg:w-[800px] w-[80%] ${theme ? 'light' : 'dark'} p-8 rounded-lg`}>
+        <div className={` flex gap-3 mb-2 flex-wrap`}>
+          <input type="text" className={`pl-[10px] rounded-[15px] lg:w-[650px] w-[70%] lg:p-4 mr-3 ${theme ? ' dark' : 'light'}`} placeholder='write name of city' onChange={changeInput} />
+          <button className={`lg:text-[24px] p-3  border rounded-[50%]  ${theme ? ' dark' : 'light'}`} onClick={handleWheather}><FaSearch /></button>
         </div>
         <div className="error" >{error}</div>
 
@@ -99,13 +95,13 @@ const Wheather = ({ theme }) => {
 
           }
           </div>
-          <h2 className='text-[32px]'>{Math.round(data.celcius)}&deg;c</h2>
-          <h1>{data.name}</h1>
-          <div className={`${styles.flexBetween}`}>
-            <div className={`${styles.flexBetween} gap-2`}> <WiHumidity className={`text-[26px]`} /> <div className="">
+          <h2 className='text-[32px] lg:text-[42px]'>{Math.round(data.celcius)}&deg;c</h2>
+          <h1 className='text-[32px] font-bold mb-3'>{data.name}</h1>
+          <div className={`${styles.flexBetween} `}>
+            <div className={`${styles.flexBetween} lg:text-[32px] gap-6`}> <WiHumidity className={`text-[26px] lg:text-[42px]`} /> <div className="">
               <h3>{Math.round(data.humidity)}%</h3><p>humidity</p></div></div>
 
-            <div className={`${styles.flexBetween} gap-2`}> <FaWind className={`text-[24px]`} /> <div className=""><p>speed</p>
+            <div className={`${styles.flexBetween} gap-6 lg:text-[32px]`}> <FaWind className={`text-[24px] lg:text-[42px]`} /> <div className=""><p>speed</p>
               <h3>{Math.round(data.speed)}km/h</h3></div></div>
 
           </div>

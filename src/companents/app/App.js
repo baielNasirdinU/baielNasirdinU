@@ -39,11 +39,12 @@ const App = () => {
               </>
             }
           />
-          <Route path="/blog" element={<Blog />} />
           <Route
             path="/about"
             element={<About theme={theme} />}
           />
+          <Route path="/blog"
+            element={<Blog theme={theme} />} />
           <Route
             path="/Code"
             element={<Code theme={theme} />}
