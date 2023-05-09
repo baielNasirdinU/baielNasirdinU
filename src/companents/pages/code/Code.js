@@ -1,4 +1,5 @@
 import { Component } from "react";
+
 import BookList from "./bookList/BookList";
 import AddUser from "./bookList/AddUser";
 // import InfoUser from "./infoUser/InfoUser";
@@ -304,7 +305,25 @@ class Code extends Component {
     return (
       <div className={`  ${theme ? "dark" : "light"} `}>
         <div className={`${styles.container} pt-8`}>
-          {" "}
+          <h2 id='/code'
+            className={`${styles.textC}  text-center text-[36px] relative  p-9 mb-9`}
+          >
+
+            code example
+            <div
+              className={`w-[50px] h-[4px] ${theme ? "   bg-white b" : " bg-black"
+                } absolute left-[50%]  `}
+            ></div>
+            <div
+              className={`w-[10px] h-[10px] ${theme ? "   bg-white b" : " bg-black"
+                } absolute left-[50%]  translate-x-[-50%] rounded-lg`}
+            ></div>
+            <div
+              className={`w-[50px] h-[4px] ${theme ? "   bg-white b" : " bg-black"
+                } absolute right-[50%] `}
+            ></div>
+          </h2>
+
           <AddUser
             adForm={this.adForm}
             theme={theme}

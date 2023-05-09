@@ -20,21 +20,26 @@ const Navbar = ({ theme, setTheme }) => {
     },
     {
       id: 3,
+      name: "skills",
+      href: "/skills ",
+    },
+    {
+      id: 4,
       name: "blog",
       href: "/blog",
     },
     {
-      id: 4,
+      id: 5,
       name: "code examples",
       href: "/code",
     },
     {
-      id: 5,
+      id: 6,
       name: "websites",
       href: "/website",
     },
     {
-      id: 6,
+      id: 7,
       name: "contact",
       href: "/contact",
     },
@@ -103,48 +108,50 @@ const Navbar = ({ theme, setTheme }) => {
                   onClick={onLight}
                   className={`${styles.textOrange} hover:scale-[2] transition-all duration-500`}
                 />
+              )}</button>
+            <div className="">
+              {toggleNav ? (
+                <FcMenu
+                  onClick={onToggle}
+                  className="sm:hidden flex text-[25px] text-white-500 text-blue-900"
+                />
+              ) : (
+                <RiCloseCircleLine
+                  onClick={onToggle}
+                  className="sm:hidden flex text-[25px] text-rose-500"
+                />
               )}
-              <div className="">
-                {toggleNav ? (
-                  <FcMenu
-                    onClick={onToggle}
-                    className="sm:hidden flex text-[25px] text-white-500 text-blue-900"
-                  />
-                ) : (
-                  <RiCloseCircleLine
-                    onClick={onToggle}
-                    className="sm:hidden flex text-[25px] text-rose-500"
-                  />
-                )}
-              </div>
-              <div
-                className={`bg-slate-30  absolute top-20  ${toggleNav ? "hidden" : "flex"
-                  } p-6 left-0 right-0 sm:hidden  bg-slate-500 sidebar `}
+            </div>
+            <div
+              className={`bg-slate-30  absolute top-20  ${toggleNav ? "hidden" : "flex"
+                } p-6 left-0 right-0 sm:hidden  bg-slate-500 sidebar `}
+            >
+              <ul
+                className={`sm:${styles.flexBetween}  ${styles.textC}   text-lg  list-none flex-col text-center  m-auto  `}
               >
-                <ul
-                  className={`sm:${styles.flexBetween}  ${styles.textC}   text-lg  list-none flex-col text-center  m-auto  `}
-                >
-                  {data.map((value, idx) => (
-                    <li key={value.id} className="p-3">
-                      <Link
-                        to={value.href}
-                        onClick={() =>
-                          activeHandler(value.id)
-                        }
-                        className={`hover:text-green-500 transition-all duration-500 z-30 
+                {data.map((value, idx) => (
+                  <li key={value.id} className="p-3">
+                    <Link
+                      to={value.href}
+                      onClick={() =>
+                        activeHandler(value.id)
+                      }
+                      className={`hover:text-green-500 transition-all duration-500 z-30 
                         
                         ${active === value.id
-                            ? "text-green-900"
-                            : ""
-                          }`}
-                      >
-                        {value.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </button>
+                          ? "text-green-900"
+                          : ""
+                        }`}
+                    >
+                      {value.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+
+
           </nav>
         </div>
       </header>

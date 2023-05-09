@@ -1,6 +1,8 @@
 import React from "react";
 // import heroBg from "../../img/heroBg.jpg";
+import { FaLongArrowAltRight } from 'react-icons/fa'
 import styles from "../../util/style";
+import { NavLink } from "react-router-dom";
 import {
   FaHtml5,
   FaCss3Alt,
@@ -37,17 +39,17 @@ function Hero({ theme, setTheme }) {
               front-end developer
             </p>
 
-            <a
-              href="website"
-              className={`${styles.textC} sm:text-[22px] text-black hover:text-white bg-gray-400 font-semibold sm:p-3 p-2 sm:pr-5 pr-5 outline-none transition-all duration-500 rounded-[10px] hover:bg-black`}
-            >
-              my works
-            </a>
+            <div className="w-[120px] border p-2 rounded group bg-blue-700">
+              <NavLink
+                to="/website" className={`flex justify-between ${styles.flexBetween} `}
+
+              >
+                my works <FaLongArrowAltRight className="group-hover:rotate-90 duration-500 " />
+              </NavLink></div>
 
             <div
-              className={`mt-[40px] flex gap-[15px] transition-all duration-500  ${
-                theme ? " text-white" : " text-black"
-              }`}
+              className={`mt-[40px] flex gap-[15px] transition-all duration-500  ${theme ? " text-white" : " text-black"
+                }`}
             >
               <a href="https://www.facebook.com/">
                 {" "}
