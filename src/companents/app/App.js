@@ -11,7 +11,7 @@ import {
   Website,
   Contact,
 } from "../pages";
-import { FaGithubSquare } from 'react-icons/fa'
+import { FaGithubSquare, FaPhoneVolume } from 'react-icons/fa'
 
 const App = () => {
   const [theme, setTheme] = useState(false);
@@ -66,9 +66,15 @@ const App = () => {
           />
         </Routes>
       </ThemContextProvider>
-      <div className={`fixed hidden sm:flex left-[-75px] hover:left-0 top-[50%]  duration-500 `}> <a href="https://github.com/baielNasirdinU" target="_blank"
+      <div className={`fixed hidden sm:flex left-[-75px] hover:left-0 top-[42%]  duration-500 `}> <a href="https://github.com/baielNasirdinU" target="_blank"
         className="flex w-[120px] h-[50px] p-2 justify-between  bg-blue-800 "><span className="text-[22px] text-white">
-          github</span><span><FaGithubSquare className="w-[100%] h-[100%]  text-red-100" /></span></a></div>
+          github</span><span><FaGithubSquare className="w-[100%] h-[100%]  text-red-100 ml-2" /></span></a></div>
+
+      <div className={`fixed hidden sm:flex left-[-85px] hover:left-0 top-[50%]  duration-500 `}> <a href="totel:+996220089937"
+        className="flex w-[130px] h-[50px] p-2 justify-between  bg-blue-800 "><span className="text-[22px] text-white">
+          call me</span><span><FaPhoneVolume className="w-[100%] h-[100%]  text-red-100 ml-2" /></span></a></div>
+
+
     </>
   );
 };

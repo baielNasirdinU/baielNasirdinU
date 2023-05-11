@@ -1,89 +1,37 @@
-import React, { Component } from "react";
+import React, { useState } from 'react'
+import { FaLongArrowAltRight } from 'react-icons/fa'
 
-export class ContactForm extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: "",
-      surname: "",
-      age: 0,
-      email: "",
-      password: "",
-    };
+const ContactForm = ({ theme }) => {
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
+
+
+  const onClickForm = (e) => {
+    e.preventDefault()
+
+
+    setName(
+      {
+        [e.target.name]: e.target.value
+      }
+    )
+
+
   }
-  handleInput = (e) => {
-    this.setState({
-      [e.target.name]: e.target.value,
-    });
-  };
-  handleClick = (e) => {
-    // e.preventDefault();
-  };
-  render() {
-    // console.log(this.state);
-    return (
-      <div className=" text-[22px] capitalize">
-        <div
-          className={`  rounded-lg ${this.props.theme ? "border" : "bg-gray-300"
-            } p-3 w-[350px]  `}
-        >
-          <form action="" className={`flex-col flex    `}>
-            <label htmlFor="name">firstName</label>
-            <input
-              onClick={this.handleInput}
-              className={`pl-[15px] rounded-[15px] text-black`}
-              type="text"
-              name="name"
-              id="name"
-              placeholder="firstName"
-            />
-            <label htmlFor="surname">surname</label>
-            <input
-              onClick={this.handleInput}
-              className={`pl-[15px] rounded-[15px] text-black`}
-              type="text"
-              name="surname"
-              id="surname"
-              placeholder="surname"
-            />
-            <label htmlFor="age">age</label>
-            <input
-              onClick={this.handleInput}
-              className={`pl-[15px] pr-[15px] rounded-[15px] text-black`}
-              type="number"
-              id="age"
-              name="age"
-              placeholder="age.."
-            />
-            <label htmlFor="email">email</label>
-            <input
-              onClick={this.handleInput}
-              className={`pl-[15px] rounded-[15px] text-black`}
-              type="email"
-              name="email"
-              placeholder="email..."
-              id="email"
-            />
-            <label htmlFor="password">password</label>
-            <input
-              onClick={this.handleInput}
-              className={`pl-[15px] rounded-[15px] text-black`}
-              type="password"
-              name="password"
-              placeholder="password..."
-              id="password"
-            ></input>
-            <button
-              onClick={this.handleClick}
-              className={`p-2  m-3 bg-green-700 rounded-lg`}
-            >
-              submit
-            </button>
-          </form>
-        </div>
-      </div>
-    );
-  }
+
+  console.log(name);
+  return (
+    <>
+      <form className={`flex flex-col gap-2 p-2 border `} onClick={onClickForm}
+      >
+        <input type="text" placeholder='name' className={`bg-[#ccd6f6] p-2  ${theme ? ' text-black' : 'text-black'} `} name='name' />
+        <input type="text" placeholder='email' className={`bg-[#ccd6f6] p-2  ${theme ? ' text-black' : 'text-black'} `} name='email' />
+        <textarea name="message" id="" cols="30" rows="8" className={`bg-[#ccd6f6] p-2  ${theme ? ' text-black' : 'text-black'} `} placeholder='message' ></textarea>
+        <button type='submit' name='button' className='border-2 bg-blue-700  w-[120px] flex items-center mx-auto p-2 gap-4 group'>send me  <FaLongArrowAltRight className='group-hover:rotate-90 duration-500 ' /></button>
+      </form>
+    </>
+  )
 }
 
-export default ContactForm;
+export default ContactForm

@@ -48,9 +48,8 @@ class FormSearch extends Component {
     return (
       <>
         <div
-          className={`  border mb-[30px]  p-5  rounded-lg ${
-            this.props.theme ? "" : "bg-gray-300"
-          }`}
+          className={`  border mb-[30px]  p-5  rounded-lg ${this.props.theme ? "" : "bg-gray-300"
+            }`}
         >
           <h2
             className={`${styles.textC} text-[24px]  mb-[20px]`}
@@ -60,7 +59,7 @@ class FormSearch extends Component {
           <form className={`flex flex-wrap `}>
             <input
               type="text"
-              className="p-2 border-2 mr-3 w-[300px] text-black"
+              className="p-2 border-2 mr-3 w-[300px] text-black mb-2"
               placeholder="name user ..."
               onChange={this.inputHandle}
               name="name"
@@ -68,7 +67,7 @@ class FormSearch extends Component {
             />
             <input
               type="text"
-              className="p-2 border-2  mr-3  w-[300px] text-black"
+              className="p-2 border-2  mr-3  w-[300px] text-black mb-2"
               placeholder="email ..."
               onChange={this.inputHandle}
               name="email"

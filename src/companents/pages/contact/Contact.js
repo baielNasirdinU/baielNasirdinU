@@ -13,7 +13,7 @@ const Contact = ({ theme }) => {
         contact me
       </h1>
       <div
-        className={`${styles.container} ${styles.flexBetween} lg:flex-row  flex-col  flex-wrap gap-4 `}
+        className={`${styles.container} ${styles.flexBetween} lg:flex-row  flex-col  `}
       >
         <ContactForm theme={theme} />
         <ReactMap />
