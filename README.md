@@ -2,7 +2,7 @@
 
 # I am LOOKING for JOB
 
-### full-time i will work 
+### full-time i  work 
 
 # just hire me
 
