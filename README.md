@@ -1,7 +1,10 @@
-##hi everyone 
-#i am looking for job
-###full-time i will work 
-#just hire me
+## hi everyone 
+
+# I am LOOKING for JOB
+
+### full-time i will work 
+
+# just hire me
 
 
 
