@@ -301,9 +301,9 @@ class Code extends Component {
     const stars = this.state.data.filter(
       (c) => c.favourite
     ).length;
-    const { theme } = this.props;
+    const { theme, style } = this.props;
     return (
-      <div className={`  ${theme ? "dark" : "light"} `}>
+      <div className={`  ${theme ? "dark" : "light"}  ${style ? 'h-full ' : ''} `}>
         <div className={`${styles.container} pt-8`}>
           <h2 id='/code'
             className={`${styles.textC}  text-center text-[36px] relative  p-9 mb-9`}

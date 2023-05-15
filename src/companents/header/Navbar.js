@@ -98,6 +98,19 @@ const Navbar = ({ theme, setTheme }) => {
             <button
               className={`${styles.flexBetween}  gap-8`}
             >
+              <div className="sm:hidden flex ">
+                {toggleNav ? (
+                  <FcMenu
+                    onClick={onToggle}
+                    className="sm:hidden flex text-[25px] text-white-500 text-blue-900"
+                  />
+                ) : (
+                  <RiCloseCircleLine
+                    onClick={onToggle}
+                    className="sm:hidden flex text-[25px] text-rose-500"
+                  />
+                )}
+              </div>
               {theme ? (
                 <FaSun
                   onClick={onLight}
@@ -109,19 +122,7 @@ const Navbar = ({ theme, setTheme }) => {
                   className={`${styles.textOrange} hover:scale-[2] transition-all duration-500`}
                 />
               )}</button>
-            <div className="">
-              {toggleNav ? (
-                <FcMenu
-                  onClick={onToggle}
-                  className="sm:hidden flex text-[25px] text-white-500 text-blue-900"
-                />
-              ) : (
-                <RiCloseCircleLine
-                  onClick={onToggle}
-                  className="sm:hidden flex text-[25px] text-rose-500"
-                />
-              )}
-            </div>
+
             <div
               className={`bg-slate-30  absolute top-20  ${toggleNav ? "hidden" : "flex"
                 } p-6 left-0 right-0 sm:hidden  bg-slate-500 sidebar `}

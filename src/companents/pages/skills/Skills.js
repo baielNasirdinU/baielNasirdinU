@@ -15,7 +15,7 @@ import {
 import { FaGithubSquare } from 'react-icons/fa'
 
 
-const Skills = ({ theme }) => {
+const Skills = ({ theme, style }) => {
     const skillsIcon = [
         {
             name: 'html',
@@ -71,7 +71,7 @@ const Skills = ({ theme }) => {
         }
     ]
     return (
-        <div className={`  ${theme ? "dark" : "light"}  `}>
+        <div className={`  ${theme ? "dark" : "light"} ${style ? 'h-[100%] ' : ''}  `}>
             <h2 id='/code'
                 className={`${styles.textC}  text-center text-[36px] relative  p-9 `}
             >
@@ -91,10 +91,11 @@ const Skills = ({ theme }) => {
                 ></div>
             </h2>
             <div className={`${styles.container}   `}>
-                <ul className={`w-[100%] grid grid-cols-2 sm:grid-cols-4 gap-4   text-center py-8`}>
+                <ul className={`w-[100%] flex flex-wrap gap-6  ss:justify-start ${styles.flexAround}   text-center py-8 `}>
                     {
                         skillsIcon.map(item => (
-                            <li key={item.id} className={` ${theme ? "dark" : "bg-blue-500"}  shadow-md shadow-[#040c16] hover:scale-110 duration-500  w-[170px] mt-3   p-[20px]`}>
+                            <li key={item.id} className={` ${theme ? "dark" : "bg-blue-500"}
+                              shadow-md shadow-[#040c16] hover:scale-110 duration-500  w-[200px] mt-3   p-[20px]`}>
                                 {
                                     item.icon
 

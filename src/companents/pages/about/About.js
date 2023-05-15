@@ -10,12 +10,12 @@ import {
   FaArrowUp,
   FaVuejs,
 } from "react-icons/fa";
-const About = ({ theme }) => {
+const About = ({ theme, style }) => {
   return (
     <>
       <div
         className={` pb-[40px]  ${theme ? "dark" : "light"
-          }`}
+          } ${style ? 'h-full ' : ''}`}
       >
         <div className={`${styles.container} `}>
           <div className={``}>
@@ -42,7 +42,7 @@ const About = ({ theme }) => {
             className={`${styles.flexBetween} flex-wrap  wb:flex-row ${styles.flexCenter} flex-col `}
           >
             {" "}
-            <div className=" order-2 sm:order-1 md:w-[500px] w-[400px]">
+            <div className=" order-2 sm:order-1 w-[250px] md:w-[500px] xs:w-[400px]">
               <h2
                 className={`${styles.textC} font-semibold text-[26px]  mb-[30px]`}
               >
@@ -76,7 +76,7 @@ const About = ({ theme }) => {
               ></div>
               <FaArrowDown className="absolute bottom-[-20px] left-[-6px]" />
             </div>
-            <div className="order-1 sm:order-3 lg:w-[400px] lg:h-[400px] w-[350px] overflow-hidden  rounded-[50%] m-3 ">
+            <div className="order-1 sm:order-3 lg:w-[400px] lg:h-[400px] sm:w-[350px] overflow-hidden w-[250px] rounded-[50%] m-3 ">
               <FaVuejs className=" text-[50%] absolute text-gray-500 -z-10 right-0 wb:hidden " />
               <img
                 src={myPhoto}
