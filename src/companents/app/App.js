@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import ThemContextProvider from "../context";
 import Navbar from "../header/Navbar";
+import { motion } from "framer-motion"
+import {BsFillBalloonHeartFill}from 'react-icons/bs'
+
 import {
   Hero,
   About,
@@ -24,6 +27,8 @@ const App = () => {
 
   return (
     <>
+    <motion.div className="absolute" animate={{}}>
+      <BsFillBalloonHeartFill /></motion.div>
       <ThemContextProvider>
         <Navbar theme={theme} setTheme={setTheme} />
         <Routes>
