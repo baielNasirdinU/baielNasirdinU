@@ -304,7 +304,7 @@ class Code extends Component {
     ).length;
     const { theme, style } = this.props;
     return (
-      <div className={`  ${theme ? "dark" : "light"}  ${style ? 'h-full ' : ''} `}>
+      <div className={`  ${theme ? "dark" : "light"}  ${style ? 'h-scr ' : ''} `}>
         <div className={`${styles.container} pt-8`}>
           <h2 id='/code'
             className={`${styles.textC}  text-center text-[36px] relative  p-9 mb-9`}

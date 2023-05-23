@@ -5,7 +5,7 @@ import styles from '../../util/style'
 const Blog = ({ theme, style }) => {
   return (
     <>
-      <div className={`${theme ? 'dark' : 'light'}  pb-6 h-[640px]  ${style ? 'h-[100vh]  ' : ''}`}>
+      <div className={`${theme ? 'dark' : 'light'}  pb-6 h-[640px]  ${style ? 'h-screen  ' : ''}`}>
         <h2 className={`${styles.textC} text-center text-[32px] relative font-bold p-9 mb-9`}>blog
           <div
             className={`w-[50px] h-[4px] ${theme ? "   bg-white b" : " bg-black"

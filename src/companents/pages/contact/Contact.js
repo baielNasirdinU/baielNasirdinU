@@ -7,7 +7,7 @@ const Contact = ({ theme, style }) => {
   return (
     <div
       className={`  ${theme ? " dark" : "light"
-        } ${style ? 'h-full ' : ''} pt-[50px] pb-[50px]`}
+        } ${style ? 'h-screen' : ''} pt-[50px] pb-[50px]`}
     >
       <h2 id='/code'
         className={`${styles.textC}  text-center text-[36px] relative  p-9 `}

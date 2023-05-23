@@ -71,7 +71,7 @@ const Skills = ({ theme, style }) => {
         }
     ]
     return (
-        <div className={`  ${theme ? "dark" : "light"} ${style ? 'h-[100%] ' : ''}  `}>
+        <div className={`  ${theme ? "dark" : "light"} ${style ? 'h-screen ' : ''}  `}>
             <h2 id='/code'
                 className={`${styles.textC}  text-center text-[36px] relative  p-9 `}
             >

@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import ThemContextProvider from "../context";
 import Navbar from "../header/Navbar";
-import { motion } from "framer-motion"
-import {BsFillBalloonHeartFill}from 'react-icons/bs'
+import Footer from "../footer/Footer";
+// import { motion } from "framer-motion"
+// import {BsFillBalloonHeartFill}from 'react-icons/bs'
 
 import {
   Hero,
@@ -27,8 +28,8 @@ const App = () => {
 
   return (
     <>
-    <motion.div className="absolute" animate={{}}>
-      <BsFillBalloonHeartFill /></motion.div>
+    {/* <motion.div className="absolute" animate={{}}> */}
+      {/* <BsFillBalloonHeartFill /></motion.div> */}
       <ThemContextProvider>
         <Navbar theme={theme} setTheme={setTheme} />
         <Routes>
@@ -71,6 +72,7 @@ const App = () => {
             element={<Contact theme={theme} style={hight} />}
           />
         </Routes>
+        <Footer theme={theme}/>
       </ThemContextProvider>
       <div className={`fixed hidden sm:flex left-[-75px] hover:left-0 top-[42%]  duration-500 `}>
         <a href="https://github.com/baielNasirdinU" target="_blank" rel="noreferrer noopener"
