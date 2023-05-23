@@ -31,7 +31,7 @@ function Hero({ theme, setTheme }) {
             <h3
               className={`${styles.textC}sm:text-[32px] text-[24px] font-semibold mt-3`}
             >
-              Bsiel Nasirdin uulu
+              Baiel Nasirdin uulu
             </h3>
             <p
               className={`${styles.textC}sm:text-[32px] text-[24px] font-semibold rounded-[20px]  mt-3 mb-6`}

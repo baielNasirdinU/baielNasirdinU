@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import styles from "../../../util/style";
 import { v4 as uuidv4 } from "uuid";
+import { FaLongArrowAltRight } from 'react-icons/fa'
+
 class FormSearch extends Component {
   constructor(props) {
     super(props);
@@ -73,12 +75,12 @@ class FormSearch extends Component {
               name="email"
               value={email}
             />
-            <button
-              onClick={this.clickHandler}
-              className={`w-[85px] border bg-gray-500 text-white rounded`}
-            >
-              add
-            </button>
+
+        
+            <button type='submit' name='button' onClick={this.handleClick}
+            className='border-2 bg-blue-700  w-[120px] flex items-center mx-auto p-2 gap-4 group'>send me  
+            <FaLongArrowAltRight className='group-hover:rotate-90 duration-500 ' /></button>
+
           </form>
           <div>
             <h2 className={`${styles.textC} text-[18px]`}>

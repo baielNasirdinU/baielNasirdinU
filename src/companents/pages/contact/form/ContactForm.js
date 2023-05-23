@@ -61,7 +61,7 @@ export class ContactForm extends Component {
         }
       )
       setTimeout(() => {
-        alert('lkjasd')
+        alert('your message sent')
 
       }, 3000);
     }
@@ -87,7 +87,8 @@ export class ContactForm extends Component {
             cols="30" rows="8" className={`bg-[#ccd6f6] p-2  ${theme ? ' text-black' : 'text-black'} `}
             placeholder='message' ></textarea>
           <button type='submit' name='button' onClick={this.handleClick}
-            className='border-2 bg-blue-700  w-[120px] flex items-center mx-auto p-2 gap-4 group'>send me  <FaLongArrowAltRight className='group-hover:rotate-90 duration-500 ' /></button>
+            className='border-2 bg-blue-700  w-[120px] flex items-center mx-auto p-2 gap-4 group'>send me  
+            <FaLongArrowAltRight className='group-hover:rotate-90 duration-500 ' /></button>
         </form>
       </div>
     )
