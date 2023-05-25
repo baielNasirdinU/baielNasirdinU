@@ -1,4 +1,4 @@
-import React,{ useState} from "react";
+import React,{  useState} from "react";
 import { v4 as uuidv4 } from 'uuid';
 import {FaPen ,FaSave ,FaTrashAlt}from 'react-icons/fa'
 import { FaLongArrowAltRight } from 'react-icons/fa'
@@ -10,6 +10,16 @@ function TodoList() {
   const [newTodo,setNewTodo]=useState('')
 
   const [error,setError]=useState(false)
+// useEffect(()=>{
+//   let d=localStorage.getItem('data')
+//   if (d) {
+//     setTodolist(JSON.parse(d))
+    
+//   }
+// },[])
+//   useEffect(()=>{
+//     localStorage.setItem('data',todolist)
+//   })
 
   const clickHandle=()=>{
 
