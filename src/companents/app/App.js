@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import ThemContextProvider from "../context";
 import Navbar from "../header/Navbar";
@@ -20,6 +20,15 @@ import { FaGithubSquare, FaPhoneVolume } from 'react-icons/fa'
 const App = () => {
   const [theme, setTheme] = useState(false);
   const [hight] = useState(true)
+useEffect(()=>{
+  const data=window.localStorage.getItem('my_localStorge')
+  setTheme(JSON.parse(data))
+},[])
+
+useEffect(()=>{
+  window.localStorage.setItem('my_localStorge',JSON.stringify(theme))
+},[theme])
+
   ontoggle = () => {
     setTheme((prevState) => {
       prevState = !theme;
