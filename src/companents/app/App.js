@@ -3,8 +3,6 @@ import { Routes, Route, Link } from "react-router-dom";
 import ThemContextProvider from "../context";
 import Navbar from "../header/Navbar";
 import Footer from "../footer/Footer";
-// import { motion } from "framer-motion"
-// import {BsFillBalloonHeartFill}from 'react-icons/bs'
 
 import {
   Hero,
@@ -21,12 +19,12 @@ const App = () => {
   const [theme, setTheme] = useState(false);
   const [hight] = useState(true)
 useEffect(()=>{
-  const data=window.localStorage.getItem('my_localStorge')
+  const data=window.localStorage.getItem('my_local')
   setTheme(JSON.parse(data))
 },[])
 
 useEffect(()=>{
-  window.localStorage.setItem('my_localStorge',JSON.stringify(theme))
+  window.localStorage.setItem('my_local',JSON.stringify(theme))
 },[theme])
 
   ontoggle = () => {
