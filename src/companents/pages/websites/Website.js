@@ -1,7 +1,7 @@
 import React from "react";
 
-const Website = () => {
-  return <div>Website</div>;
+const Website = ({theme,style}) => {
+  return <div className={`${theme ? 'dark' : 'light'}    ${style ? 'h-screen  ' : ''}`}>Website</div>;
 };
 
 export default Website;

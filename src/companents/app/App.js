@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, {  useEffect, useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import ThemContextProvider from "../context";
 import Navbar from "../header/Navbar";
 import Footer from "../footer/Footer";
+
 
 import {
   Hero,
