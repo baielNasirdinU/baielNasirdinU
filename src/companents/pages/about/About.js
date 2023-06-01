@@ -15,7 +15,7 @@ const About = ({ theme, style }) => {
     <>
       <div
         className={` pb-[40px]  ${theme ? "dark" : "light"
-          } ${style ? 'h-screen' : ''}`}
+          } ${style ? 'lg:h-screen' : ''}`}
       >
         <div className={`${styles.container} `}>
           <div className={``}>

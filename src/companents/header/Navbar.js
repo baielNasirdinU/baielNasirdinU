@@ -95,10 +95,10 @@ const Navbar = ({ theme, setTheme }) => {
                 </li>
               ))}
             </ul>
-            <button
+            <div
               className={`${styles.flexBetween}  gap-8`}
             >
-              <div className="sm:hidden flex ">
+              <button className="sm:hidden flex ">
                 {toggleNav ? (
                   <FcMenu
                     onClick={onToggle}
@@ -110,8 +110,8 @@ const Navbar = ({ theme, setTheme }) => {
                     className="sm:hidden flex text-[25px] text-rose-500"
                   />
                 )}
-              </div>
-              {theme ? (
+              </button>
+           <button>   {theme ? (
                 <FaSun
                   onClick={onLight}
                   className={`${styles.textOrange} hover:scale-[2] transition-all duration-500`}
@@ -121,7 +121,7 @@ const Navbar = ({ theme, setTheme }) => {
                   onClick={onLight}
                   className={`${styles.textOrange} hover:scale-[2] transition-all duration-500`}
                 />
-              )}</button>
+              )}</button></div>
 
             <div
               className={`bg-slate-30  absolute top-20  ${toggleNav ? "hidden" : "flex"

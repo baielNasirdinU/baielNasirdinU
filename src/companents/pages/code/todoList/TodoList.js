@@ -67,13 +67,13 @@ const saveClick=(id)=>{
   return (
     <div className=" pb-3">
       <div className=" text-center m-6 text-[32px] capitalize font-bold  ">todo list</div>
-      <div className="border m-auto w-[500px] bg-white rounded-[20px] p-3">
-     <div className="flex justify-around p-4">
-     <input type="text " value={newTodo} className="p-1 border-4 mr-8 rounded text-black " onChange={(e)=>setNewTodo(e.target.value)} 
+      <div className=" m-auto max-w-[350px] sm:w-[500px] bg-white pt-4 pb-2 rounded-[20px] ">
+     <div className="flex justify-around  flex-wrap">
+     <input type="text " value={newTodo} className=" border xl:w-[100px] sm:pl-2  mr-2 rounded outline text-black " onChange={(e)=>setNewTodo(e.target.value)} 
         placeholder="write todo "/>
 
         {/* <button className=" w-[80px]  bg-blue-500 rounded p-2 text-white capitalize" onClick={clickHandle}>add</button> */}
-        <div className="w-[120px] border p-2 rounded group bg-blue-700">
+        <div className="max-w-[120px] border p-2 rounded group bg-blue-700">
               <button
           className={`flex justify-between ${styles.flexBetween} `} onClick={clickHandle}
 

@@ -77,7 +77,7 @@ export class ContactForm extends Component {
     return (
       <div>
 
-        <form className={`flex flex-col gap-2 p-2 border mb-4 w-[350px] sm:w-[450px]`}
+        <form className={`flex flex-col gap-2 p-2 border mb-4 max-w-[350px] sm:w-[450px]`}
         >
           <input type="text" placeholder='name' onChange={this.inputChange} value={this.state.name}
             className={`bg-[#ccd6f6] p-2  ${theme ? ' text-black' : 'text-black'} `} name='name' />

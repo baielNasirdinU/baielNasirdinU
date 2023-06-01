@@ -20,7 +20,7 @@ function Hero({ theme, setTheme }) {
     <>
       <div className={`${theme ? "dark" : "light"} `}>
         <div
-          className={`${styles.container} h-[650px] ${styles.flexBetween} `}
+          className={`${styles.container}   h-[650px] ${styles.flexBetween} `}
         >
           <div className="">
             <h2
