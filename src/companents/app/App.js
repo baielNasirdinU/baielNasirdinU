@@ -3,6 +3,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import ThemContextProvider from "../context";
 import Navbar from "../header/Navbar";
 import Footer from "../footer/Footer";
+import Confetti from 'react-confetti'
 
 
 import {
@@ -16,9 +17,24 @@ import {
 } from "../pages";
 import { FaGithubSquare, FaPhoneVolume } from 'react-icons/fa'
 
+
+
 const App = () => {
+
+  const [piece,setPiece]=useState(200)
   const [theme, setTheme] = useState(false);
   const [hight] = useState(true)
+
+const stop=()=>{
+setTimeout(() => {
+  setPiece(0)
+  
+}, 3000);
+}
+useEffect(()=>{
+  stop()
+},[])
+
 useEffect(()=>{
   const data=window.localStorage.getItem('my_local')
   setTheme(JSON.parse(data))
@@ -36,9 +52,9 @@ useEffect(()=>{
 
   return (
     <>
-    {/* <motion.div className="absolute" animate={{}}> */}
-      {/* <BsFillBalloonHeartFill /></motion.div> */}
+
       <ThemContextProvider>
+
         <Navbar theme={theme} setTheme={setTheme} />
         <Routes>
           <Route
@@ -81,6 +97,7 @@ useEffect(()=>{
           />
         </Routes>
         <Footer theme={theme}/>
+        <Confetti className="w-full h-screen" gravity={0.2} numberOfPieces={piece}/>
       </ThemContextProvider>
       <div className={`fixed hidden sm:flex left-[-75px] hover:left-0 top-[42%]  duration-500 `}>
         <a href="https://github.com/baielNasirdinU" target="_blank" rel="noreferrer noopener"
