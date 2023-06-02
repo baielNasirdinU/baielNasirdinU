@@ -39,13 +39,13 @@ function Hero({ theme, setTheme }) {
               front-end developer
             </p>
 
-            <div className="w-[120px] border p-2 rounded group bg-blue-700">
+            <button className="w-[120px] border p-2 rounded group bg-blue-700">
               <NavLink
                 to="/website" className={`flex justify-between ${styles.flexBetween} `}
 
               >
                 my works <FaLongArrowAltRight className="group-hover:rotate-90 duration-500 " />
-              </NavLink></div>
+              </NavLink></button>
 
             <div
               className={`mt-[40px] flex gap-[15px] transition-all duration-500  ${theme ? " text-white" : " text-black"
